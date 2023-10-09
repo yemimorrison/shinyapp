@@ -23,6 +23,7 @@ library(devtools)
 library(usethis)
 
 load("shinydata.RData")
+query_data_frame$UnemploymentRate <- as.numeric(as.character(unlist(query_data_frame$UnemploymentRate)))
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
