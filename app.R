@@ -22,8 +22,7 @@ library(ggplot2)
 library(devtools)
 library(usethis)
 
-query_data_frame <- load("shinydata.RData")
-query_data_frame <- as.data.frame(query_data_frame)
+load("shinydata.RData")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
