@@ -12,14 +12,17 @@
 #' @return a shiny web application plotting a basic bar chart of the unemployment rate in 6 municipalites. 
 #' It includes a dropdown option to filter through years.
 #' 
-#' @import shiny
-#' @import ggplot2
-#' @import dplyr
 #' @export
 #'
 #'
 
+library(shiny)
+library(dplyr)
+library(ggplot2)
+library(devtools)
+library(usethis)
 
+query_data_frame <- load("shinydata.RData")
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
