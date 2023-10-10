@@ -21,9 +21,12 @@ library(dplyr)
 library(ggplot2)
 library(devtools)
 library(usethis)
+install_github("yemimorrison/koladaAPI")
 
-load("shinydata.RData")
-query_data_frame$UnemploymentRate <- as.numeric(as.character(unlist(query_data_frame$UnemploymentRate)))
+df <- getquerydata("http://api.kolada.se/v2/data/kpi/N03932", 
+             entity = "municipality", 
+             municipality = c("Uppsala","Goteborg", "Stockholm", "Linkoping", "Malmo", "Vasteras", "Norrkoping"),
+             year = c(2010:2022))
 
 # Define UI for application that draws a histogram
 ui <- fluidPage(
