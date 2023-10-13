@@ -22,6 +22,7 @@ library(dplyr)
 library(ggplot2)
 library(devtools)
 library(usethis)
+library(koladaAPI)
 
 df <- getquerydata("http://api.kolada.se/v2/data/kpi/N03932", 
              entity = "municipality", 
